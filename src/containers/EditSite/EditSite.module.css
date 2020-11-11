@@ -1,0 +1,51 @@
+.Edit {
+    background-color: red;
+}
+
+.TopContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    max-width: 1700px;
+}
+
+.GoBack {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    cursor: pointer;
+}
+
+.Delete {
+    color: red;
+    cursor: pointer;
+}
+
+.Panels {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: auto;
+    min-width: 500px;
+    max-width: 1700px;
+}
+
+.Divider {
+    width: 100px;
+    min-width: 100px;
+}
+
+.SearchBarContainer {
+    height: 130px;
+    align-items: center;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    max-width: 1700px;
+    min-width: 600px;
+}
+
+.Loader {
+    color: rgba(46, 101, 253, 1);
+}

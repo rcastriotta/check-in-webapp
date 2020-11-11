@@ -1,0 +1,8 @@
+.SearchBarContainer {
+    height: 120px;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    min-width: 600px;
+    max-width: 1700px;
+}

@@ -1,0 +1,86 @@
+.Login {
+    background-color: #FFFFFF;
+    width: 350px;
+    height: 350px;
+    margin: 7em auto;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0px 3px 30px 2px rgba(46, 101, 253, .1);
+    text-align: left;
+}
+
+h2 {
+    color: rgba(46, 101, 253, 1);
+    font-family: "averta-bold";
+}
+
+.Form {
+    width: auto;
+    height: 180px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.ButtonContainer {
+    margin-top: 10px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    height: 100px;
+    justify-content: space-around;
+}
+
+.Button {
+    background-color: rgba(46, 101, 253, 1);
+    border: none;
+    color: white;
+    font-family: "averta-bold";
+    height: 37px;
+    width: 120px;
+    border-radius: 100px;
+    font-size: 15px;
+    outline: none;
+    cursor: pointer;
+}
+
+.Button:active {
+    background-color: rgba(46, 101, 253, .5);
+}
+
+.Button:hover {
+    box-shadow: 0px 3px 8px 2px rgba(46, 101, 253, .3);
+}
+
+.TextButton {
+    color: rgba(46, 101, 253, 1);
+    font-family: "averta-bold";
+    cursor: pointer;
+}
+
+.ButtonNotActive {
+    background-color: lightgrey;
+    border: none;
+    color: white;
+    font-family: "averta-bold";
+    height: 37px;
+    width: 120px;
+    border-radius: 100px;
+    font-size: 15px;
+    outline: none;
+}
+
+.Error {
+    color: red;
+    text-align: center;
+    font-size: 12px;
+    margin: auto;
+    margin: 4em auto;
+}
+
+.LoaderContainer {
+    margin: auto;
+    text-align: center;
+    margin: 4em auto;
+}

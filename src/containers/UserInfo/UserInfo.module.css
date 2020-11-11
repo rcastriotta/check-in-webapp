@@ -1,0 +1,17 @@
+.TopContainer {
+    display: flex;
+    justify-content: flex-start;
+    max-width: 1600px;
+}
+
+.GoBack {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+.Loader {
+    color: rgba(46, 101, 253, 1);
+}

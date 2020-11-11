@@ -1,0 +1,41 @@
+.Square {
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    height: 200px;
+    padding-bottom: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    box-shadow: 0px 3px 30px 2px rgba(46, 101, 253, .1);
+    background-color: white;
+    border-radius: 10px;
+}
+
+.Circle {
+    display: flex;
+    height: 150px;
+    width: 150px;
+    background-color: rgba(46, 101, 253, .15);
+    align-self: center;
+    border-radius: 200px;
+    align-items: center;
+    justify-content: center;
+    font-family: "averta-bold";
+    color: rgba(46, 101, 253, 1);
+    font-size: 30px;
+}
+
+.CircleText {
+    display: flex;
+    height: 150px;
+    width: 150px;
+    background-color: rgba(46, 101, 253, .15);
+    align-self: center;
+    border-radius: 200px;
+    align-items: center;
+    justify-content: center;
+    font-family: "averta-bold";
+    color: rgba(46, 101, 253, 1);
+    font-size: 15px;
+    text-align: center;
+}

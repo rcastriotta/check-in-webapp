@@ -1,0 +1,33 @@
+.Item {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 60px;
+    width: auto;
+    align-items: center;
+    border-radius: 10px;
+    padding-left: 10px;
+}
+
+.LabelContainer {
+    display: flex;
+    flex: 1;
+    margin-right: 2px;
+    align-items: center;
+    justify-content: center;
+}
+
+.LabelContainerTitle {
+    display: flex;
+    flex: 1;
+    margin-right: 2px;
+    align-items: center;
+}
+
+.Pressable {
+    cursor: pointer;
+}
+
+.Pressable:hover {
+    background-color: rgba(46, 101, 253, .1);
+}
