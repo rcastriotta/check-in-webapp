@@ -24,6 +24,7 @@ import Item from '../../components/UI/Item/Item';
 const UserInfo = (props) => {
     const userId = props.history.location.pathname.split('/users/')[1]
     const uid = useSelector(state => state.auth.uid)
+    const [isLoading, setIsLoading] = useState(false)
     const [lastVisible, setLastVisible] = useState(null)
     const [checkIns, setCheckIns] = useState([])
     const [userInfo, setUserInfo] = useState({
@@ -35,6 +36,8 @@ const UserInfo = (props) => {
 
     // fetch all checkins
     const getCheckins = useCallback(() => {
+
+        setIsLoading(true)
         const query = fs.collection("checkIns").where("userId", "==", userId).where("ownerId", "==", uid).orderBy("checkedInAt", "desc").limit(25)
 
         query.get().then((querySnapshot) => {
@@ -64,8 +67,8 @@ const UserInfo = (props) => {
                 setLastVisible(querySnapshot.docs[querySnapshot.size - 1])
             }
         })
+        setIsLoading(false)
     }, [uid, userId])
-
 
 
     const loadMore = () => {
@@ -105,7 +108,7 @@ const UserInfo = (props) => {
                 <h2>Go Back</h2>
             </div>
             <UserBar user={userInfo} />
-            <Panel onClick={() => { }} title={"Check-ins"} labels={["Site Code", "Date"]} data={checkIns}>
+            <Panel loading={isLoading} onClick={() => { }} title={"Check-ins"} labels={["Site Code", "Date"]} data={checkIns}>
                 <InfiniteScroll
                     pageStart={0}
                     loadMore={loadMore}
@@ -122,7 +125,7 @@ const UserInfo = (props) => {
                 </InfiniteScroll>
 
             </Panel>
-        </div>
+        </div >
     )
 }
 

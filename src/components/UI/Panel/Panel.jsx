@@ -8,7 +8,6 @@ import Loader from 'react-loader-spinner'
 
 const Panel = (props) => {
 
-
     return (
         <div className={props.styles ? props.styles : styles.Panel} >
             <div className={styles.Header}>

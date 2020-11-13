@@ -37,7 +37,7 @@ const Users = (props) => {
 
         if (searchText.length > 0) {
             const text = searchText.toLowerCase().replace(/ /g, '')
-            query = fs.collection(`organizations/${uid}/users`).orderBy("nameSearchValue").startAt(`${text}`).endAt(`${text}zzzzzzzzzzzzz`)
+            query = fs.collection(`organizations/${uid}/users`).where("searchKeywords", "array-contains", text).limit(25)
         }
 
         query.get().then((querySnapshot) => {
@@ -69,7 +69,7 @@ const Users = (props) => {
 
             if (searchText.length > 0) {
                 const text = searchText.toLowerCase().replace(/ /g, '')
-                query = fs.collection(`organizations/${uid}/users`).orderBy("nameSearchValue").startAfter(lastVisible).endAt(`${text}zzzzzzzzzzzzz`).limit(25)
+                query = fs.collection(`organizations/${uid}/users`).where("searchKeywords", "array-contains", text).startAfter(lastVisible).limit(25)
             }
 
             query.get().then((querySnapshot) => {
